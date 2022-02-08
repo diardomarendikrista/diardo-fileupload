@@ -31,16 +31,6 @@ function Example () {
       >
         <p>Upload your file / Drop to this box</p>
       </FileUpload>
-
-      {files.length > 0 &&
-        files.map((item, i) => (
-          <div key={i}>
-            <div>detail :</div>
-            <div>name: {item.name}</div>
-            <div>type: {item.type}</div>
-            <hr />
-          </div>
-      ))}
     </div>
   )
 }
@@ -89,7 +79,7 @@ Props and description:
 </table>
 
 <br />
-example with delete file :
+using your custom preview file (disable default preview) :
 
 ```
 import { FileUpload } from 'diardo-fileupload';
@@ -115,6 +105,7 @@ function Example () {
         accept="image/jpg, image/jpeg, image/png"
         onError={(value) => console.log(value, 'error value')}
         mandatory
+        disablePreview
       >
         <p>Upload your file / Drop to this box</p>
       </FileUpload>

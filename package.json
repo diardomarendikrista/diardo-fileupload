@@ -1,6 +1,6 @@
 {
 	"name": "diardo-fileupload",
-	"version": "0.1.8",
+	"version": "0.1.10",
 	"description": "React Fileupload",
 	"main": "dist/index.js",
 	"module": "dist/index.es.js",
