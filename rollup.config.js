@@ -37,6 +37,7 @@ export default [
 			'@fortawesome/free-solid-svg-icons',
 			'@fortawesome/react-fontawesome',
 			'@fortawesome/fontawesome-svg-core',
+			'prop-types',
 		],
 	},
 ];
