@@ -22,11 +22,11 @@ function Example () {
         label="Upload File"
         name="file"
         maxSize={5000000}
-				maxFiles={0}
+        maxFiles={0}
         files={files}
-				accept="image/jpg, image/jpeg, image/png"
         setFiles={setFiles}
-				onError={(value) => console.log(value, 'error value')}
+        accept=""
+        onError={(value) => console.log(value, 'error value')}
         mandatory
       >
         <p>Upload your file / Drop to this box</p>
@@ -76,7 +76,7 @@ Props and description:
   </tr>
   <tr>
     <td>accept</td>
-    <td>accepted file format</td>
+    <td>accepted file format, example: "image/jpg, image/jpeg, image/png"</td>
   </tr>
   <tr>
     <td>onError</td>
@@ -109,9 +109,11 @@ function Example () {
         label="Upload File"
         name="file"
         maxSize={5000000}
-				maxFiles={0}
+        maxFiles={0}
         files={files}
         setFiles={setFiles}
+        accept="image/jpg, image/jpeg, image/png"
+        onError={(value) => console.log(value, 'error value')}
         mandatory
       >
         <p>Upload your file / Drop to this box</p>
