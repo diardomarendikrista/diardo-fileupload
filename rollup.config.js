@@ -29,6 +29,14 @@ export default [
 			external(),
 			resolve(),
 		],
-		external: ['react', 'react-dom', 'styled-components', 'react-dropzone'],
+		external: [
+			'react',
+			'react-dom',
+			'styled-components',
+			'react-dropzone',
+			'@fortawesome/free-solid-svg-icons',
+			'@fortawesome/react-fontawesome',
+			'@fortawesome/fontawesome-svg-core',
+		],
 	},
 ];

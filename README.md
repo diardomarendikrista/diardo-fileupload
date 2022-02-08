@@ -22,8 +22,11 @@ function Example () {
         label="Upload File"
         name="file"
         maxSize={5000000}
+				maxFiles={0}
         files={files}
+				accept="image/jpg, image/jpeg, image/png"
         setFiles={setFiles}
+				onError={(value) => console.log(value, 'error value')}
         mandatory
       >
         <p>Upload your file / Drop to this box</p>
@@ -43,7 +46,47 @@ function Example () {
 }
 ```
 
-the main component is ```<FileUpload>``` , and the rest is up to you (how to show the choosen file)
+the main component is `<FileUpload>` , and the rest is up to you (how to show the choosen file)
+
+Props and description:
+<table>
+  <tr>
+    <th>Props</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>label</td>
+    <td>Title of the form.</td>
+  </tr>
+  <tr>
+    <td>maxSize</td>
+    <td>Max size in bytes</td>
+  </tr>
+  <tr>
+    <td>maxFiles</td>
+    <td>Max files can be accepted (0 = unlimited)</td>
+  </tr>
+  <tr>
+    <td>files</td>
+    <td>files on local state</td>
+  </tr>
+  <tr>
+    <td>setFiles</td>
+    <td>set files on local state</td>
+  </tr>
+  <tr>
+    <td>accept</td>
+    <td>accepted file format</td>
+  </tr>
+  <tr>
+    <td>onError</td>
+    <td>the values is show error detail</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
 
 <br />
 example with delete file :
@@ -53,7 +96,7 @@ import { FileUpload } from 'diardo-fileupload';
 
 function Example () {
   const [files, setFiles] = React.useState([]);
-  
+
 	const handleDelete = (indexFile) => {
 		const newFiles = files.filter((item, i) => i !== indexFile);
 		setFiles(newFiles);
@@ -66,6 +109,7 @@ function Example () {
         label="Upload File"
         name="file"
         maxSize={5000000}
+				maxFiles={0}
         files={files}
         setFiles={setFiles}
         mandatory
@@ -87,4 +131,5 @@ function Example () {
   )
 }
 ```
+
 of course you can modify as per needed.
